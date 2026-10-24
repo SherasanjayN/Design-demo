@@ -1,0 +1,46 @@
+/* StatusBar.css */
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.status-bar--online {
+  background-color: var(--color-success-100);
+  color: var(--color-success-600);
+}
+
+.status-bar--offline {
+  background-color: var(--color-warning-100);
+  color: var(--color-warning-600);
+}
+
+/* Animated pulse dot */
+.status-bar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.status-bar--online  .status-bar__dot { background-color: var(--color-success-500); animation: pulse 2s infinite; }
+.status-bar--offline .status-bar__dot { background-color: var(--color-warning-500); }
+
+@keyframes pulse {
+  0%  { box-shadow: 0 0 0 0 rgb(22 163 74 / 0.4); }
+  70% { box-shadow: 0 0 0 6px rgb(22 163 74 / 0); }
+  100%{ box-shadow: 0 0 0 0 rgb(22 163 74 / 0); }
+}
+
+.status-bar__text    { font-family: var(--font-tamil); }
+.status-bar__text-en { font-family: var(--font-english); opacity: 0.85; }
+
+/* On very small screens, hide the English text to save space */
+@media (max-width: 400px) {
+  .status-bar__text-en { display: none; }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ta">
+  <!--
+    index.html — Application shell
+    --------------------------------
+    lang="ta"  : Tamil is the primary language (helps screen readers and search engines).
+    The React app mounts inside <div id="root">.
+    Google Fonts are loaded here so CSS can reference them immediately.
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <!-- SEO & Social Meta -->
+    <title>TrustPass SHG — சுய உதவிக் குழு சேமிப்பு மேலாண்மை</title>
+    <meta
+      name="description"
+      content="TrustPass SHG — கிராமப்புற மகளிர் சுய உதவிக் குழுக்களுக்கான டிஜிட்டல் சேமிப்பு மற்றும் கடன் மேலாண்மை அமைப்பு. An offline-first digital savings and loan management system for rural women's Self-Help Groups."
+    />
+    <meta property="og:title" content="TrustPass SHG — சுய உதவிக் குழு சேமிப்பு மேலாண்மை" />
+    <meta
+      property="og:description"
+      content="TrustPass SHG — கிராமப்புற மகளிர் சுய உதவிக் குழுக்களுக்கான டிஜிட்டல் சேமிப்பு மற்றும் கடன் மேலாண்மை அமைப்பு. An offline-first digital savings and loan management system for rural women's Self-Help Groups."
+    />
+
+    <!-- Google Fonts: Noto Sans Tamil (Tamil text) + Inter (English UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React entry point -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

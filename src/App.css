@@ -1,0 +1,91 @@
+/* App.css */
+
+/* The outer wrapper for the entire application */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip-to-content link — visible only when focused by keyboard / screen reader */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: top var(--transition-fast);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+  outline: 3px solid var(--color-accent-400);
+  outline-offset: 2px;
+}
+
+/* ── Tab navigation bar ──────────────────────────────────────────────── */
+.tab-nav {
+  background: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 90;
+}
+
+.tab-nav .container {
+  display: flex;
+  gap: 0;
+}
+
+.tab-nav__item {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  font-family: var(--font-tamil), var(--font-sans);
+}
+
+.tab-nav__item:hover {
+  color: var(--color-primary-600);
+}
+
+.tab-nav__item--active {
+  color: var(--color-primary-700);
+  border-bottom-color: var(--color-primary-600);
+  font-weight: var(--font-weight-semibold);
+}
+
+.tab-nav__item--highlight {
+  color: #166534;
+  border-bottom-color: #166534;
+  font-weight: 600;
+  background: #f0fdf4;
+}
+
+/* ── Main page content area ─────────────────────────────────────────── */
+.main-content {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-12);
+  flex: 1;
+}
+
+/* ── Shared utility classes ─────────────────────────────────────────── */
+.btn-text {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-tamil), var(--font-sans);
+  padding: 0;
+}

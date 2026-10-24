@@ -1,0 +1,80 @@
+/* BankLocator.css */
+
+.bank-locator {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.locator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.locator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--space-5);
+}
+
+.locator-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 440px;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+
+.locator-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.locator-card:hover {
+  border-color: var(--color-primary-400);
+  background: var(--color-primary-50);
+}
+
+.locator-card--active {
+  border-color: var(--color-primary-600);
+  background: var(--color-primary-50);
+  box-shadow: var(--shadow-sm);
+}
+
+.locator-map-frame {
+  background: #f1f5f3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-svg-canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+}
+
+@media (max-width: 800px) {
+  .locator-grid {
+    grid-template-columns: 1fr;
+  }
+}

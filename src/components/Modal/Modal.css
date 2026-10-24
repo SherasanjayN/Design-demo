@@ -1,0 +1,79 @@
+/* Modal.css */
+
+/* Native <dialog> styles */
+.modal {
+  border: none;
+  border-radius: var(--radius-2xl);
+  padding: 0;
+  width: min(90vw, 560px);
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  background: var(--color-surface);
+}
+
+/* Backdrop (the dark overlay behind the dialog) */
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Slide-in animation */
+.modal[open] {
+  animation: modal-enter var(--transition-normal) ease;
+}
+
+@keyframes modal-enter {
+  from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)     scale(1);    }
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+/* Header */
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.modal__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-800);
+  margin: 0;
+}
+
+.modal__close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  transition: background-color var(--transition-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.modal__close:hover {
+  background: var(--color-gray-100);
+  color: var(--color-text-primary);
+}
+
+/* Body */
+.modal__body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  flex: 1;
+}

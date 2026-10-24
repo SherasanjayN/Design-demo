@@ -1,0 +1,7 @@
+{
+  "name": "TrustPass SHG — சுய உதவிக் குழு சேமிப்பு மேலாண்மை",
+  "description": "TrustPass SHG — கிராமப்புற மகளிர் சுய உதவிக் குழுக்களுக்கான டிஜிட்டல் சேமிப்பு மற்றும் கடன் மேலாண்மை அமைப்பு. An offline-first digital savings and loan management system for rural women's Self-Help Groups.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

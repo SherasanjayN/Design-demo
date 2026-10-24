@@ -1,0 +1,72 @@
+# =============================================================================
+# .gitignore — TrustPass SHG
+# =============================================================================
+# Files and folders listed here are never committed to version control.
+# This protects secrets, avoids committing generated files, and keeps
+# the repository clean and portable across machines.
+
+# ── Python / Backend ──────────────────────────────────────────────────────
+# Virtual environment (each developer creates their own)
+backend/venv/
+backend/.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# SQLite database files (runtime data, not source code)
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variable files (contain secrets — never commit)
+.env
+backend/.env
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# Python build artifacts
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node.js / Frontend ───────────────────────────────────────────────────
+# Installed packages (restored by `npm install`)
+frontend/node_modules/
+
+# Vite production build output
+frontend/dist/
+
+# Vite cache
+frontend/.vite/
+
+# ── IDE and Editor ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── OS files ─────────────────────────────────────────────────────────────
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# ── Logs ─────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Temporary files ───────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.bak

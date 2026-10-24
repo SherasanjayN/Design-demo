@@ -1,0 +1,106 @@
+/* SuperAdminDashboard.css — White-and-Green Design */
+
+.super-admin-dash {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0 48px;
+}
+
+.sa-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1e7dd;
+}
+
+.sa-pre-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #166534;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sa-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.sa-subtitle {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.sa-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sa-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.allocation-assistant-box {
+  background: var(--color-white);
+  border: 1px solid #d1e7dd;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.allocation-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .allocation-controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.unallocated-select-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alloc-member-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.alloc-member-item:hover {
+  background: #f0fdf4;
+}
+
+.alloc-member-item input {
+  accent-color: #166534;
+}
